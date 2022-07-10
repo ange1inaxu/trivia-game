@@ -1,6 +1,5 @@
-[demonstration video](https://youtu.be/vZ-0tBB5jtQ)
-
 # Overview
+[demonstration video](https://youtu.be/vZ-0tBB5jtQ)
 
 ## GET from open-trivia API
 I decided to choose solely T/F from the easy category in general knowledge. In the python script, I first checked if the request method was 'GET'. In the case that it was, I checked if scoreboard was passed as an argument. If it wasn't, I defaulted it to False instead of throwing an error and stopping the game as a design choice. Next I used the python requests library to fetch the data from the open Trivia API ("https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=boolean") using the pre-selected categories I mentioned. From here, I parsed for 'question' and 'correct_answer' and returned them as a well-formatted string '{question}\n{answer}' to the server to enable easier parsing in our C script later.
